@@ -10,10 +10,6 @@ body {
     @apply text-lg
 }
 
-.projects img {
-    width: 100%;
-}
-
 /* color */
 .bg-primary {
     background: #1F1F1F;
@@ -37,9 +33,4 @@ nav li a {
 
 nav li a:hover {
     color: #07928b;
-}
-
-.cursive {
-    font-family: 'Pacifico', cursive;
-    line-height: 1.5 !important;
 }

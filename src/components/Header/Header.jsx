@@ -21,7 +21,7 @@ const Header = () => {
             <a href="/#contact">Contact</a>
           </li>
           <li className="overflow-hidden">
-            <a href="#resume -link" target="_blank" without rel="noreferrer">
+            <a href="..\..\Images\Resume -Michael_Hong2.pdf" target="_blank" without rel="noreferrer">
               Resume
             </a>
           </li>
