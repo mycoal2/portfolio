@@ -2,7 +2,30 @@
     font-family: 'Pacifico', cursive;
     line-height: 1.5 !important;
 }
-
+.nameColor {
+    color: transparent;
+    background-image: linear-gradient(to left, #2ecc40, #2ecccc, #2e38cc, #cc2ecc, #cc2e2e, #ccc42e, #2ecc40);
+    -webkit-background-clip: text;
+    animation: animate 30s linear infinite;
+    -webkit-background-siz: 500%;
+    background-size: 500%;
+}   
+@keyframes animate {
+    0% {
+        background-position: 0 100%;
+    }
+    50% {
+        background-position: 500%;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
+.nameColor:hover {
+    -moz-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    }
 .Projects {
     --color: #7477FF;
     display: inline-block;

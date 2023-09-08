@@ -1,4 +1,5 @@
 import "./app.scss";
+import {Routes, Route} from "react-router-dom";
 import Header from "./components/Header/Header";
 import Intro from "./components/Intro/Intro";
 import About from "./components/About/About";
@@ -9,10 +10,11 @@ function App() {
   return (
     <>
       <Header/>
-      <Intro/>
-      <About/>
-      <Intro/>
-      <About/>
+      <Routes>
+         <Route path="/" element={<><Intro/><About/></>} />
+         <Route path="/test" element={<></>} />
+      </Routes>
+
     </>
   );
 }

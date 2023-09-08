@@ -7,12 +7,12 @@ const About = () => {
             <img
                src="..\Images\pic.jpg"
                alt="coding illustration"
-               className="w-96 h-128 mr-auto ml-20"
+               className="rounded-full shadow w-96 h-128 mr-auto ml-20"
             />
          </div>
          <div className="about-info">
             <h2 className="text-4xl font-bold mb-5 border-indigo-600 pb-2">
-               <img src="../../Images/monkaS.png" alt="👀" className="inline w-20 h-15"></img>
+               <img src="../../Images/monkaS.png" alt="👀" className="rounded-lg inline w-20 h-15"></img>
                Background Check 
             </h2>
             <p className="pb-5">

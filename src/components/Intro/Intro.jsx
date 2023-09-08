@@ -15,7 +15,7 @@ const Intro = () => {
         <div className="md:pb-5 ">
           <h1 className="cursive text-4xl lg:text-6xl py-3">
             Yo,
-            <br />I am <span className="cursive text-accent">M</span>ichael <span className="cursive text-accent">H</span>ong<br/>
+            <br />I am <span className="cursive nameColor">Michael Hong </span><br/>
             Future Computer Engineer
           </h1>
 
@@ -68,7 +68,7 @@ const Intro = () => {
         </div>
 
         <div>
-          <img src="..\Images\pic.jpg" alt="pic of me lol" className="w-96 h-128 mr-auto ml-20"/>
+          <img src="..\Images\pic.jpg" alt="pic of me lol" className="rounded-lg w-96 h-128 mr-auto ml-20"/>
         </div>
       </div>
     </section>
