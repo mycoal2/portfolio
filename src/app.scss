@@ -1,20 +1,45 @@
-.app {
-    height: 100vh;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-    .sections {
-        width: 100%;
-        height: calc(100vh - 80px);
-        background-color: beige;
-        position: relative;
-        top:80px;
-        scroll-behavior: smooth ;
-        scroll-snap-type: y mandatory;
- 
-        > *{
-            width: 100vw;
-            height: calc(100vh - 80px);   
-                
-            scroll-snap-align: start;
-        }
-    }   
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply text-lg
+}
+
+.projects img {
+    width: 100%;
+}
+
+/* color */
+.bg-primary {
+    background: #1F1F1F;
+}
+
+.bg-secondery {
+    background: #1E293B;
+}
+
+.bg-accent {
+    background: #7477FF;
+}
+
+.text-accent {
+    color: #12c2b9;
+}
+
+nav li a {
+    @apply px-4 py-5 text-lg;
+}
+
+nav li a:hover {
+    color: #07928b;
+}
+
+.cursive {
+    font-family: 'Pacifico', cursive;
+    line-height: 1.5 !important;
 }
