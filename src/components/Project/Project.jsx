@@ -20,19 +20,28 @@ const Project = () => {
    };
 
   return (
-    <section className="bg-primary px-4 text-white py-10">
+    <section className="bg-primary px-4 text-white py-12">
+      <div className="project-title"> projects </div>
       <div className="container mx-auto grid md:grid-cols-3 items-center justify-center md:justify-between py-10">
          <div className={`zoomable-div ${isZoomed[0] ? 'zoomed' : ''}`}> 
             Autonomous Hovercraft
             <center>
                <iframe className="rounded-lg" onMouseEnter={handleMouseEnter(0)} onMouseLeave={handleMouseLeave(0)} width="326" height="380" src="https://www.youtube.com/embed/tt3hhP_VjHc" title="Autonomous Hovercraft project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </center>
+            <center className="flex justify-center">
+               <img src="..\Images\Arduino-logo.png" alt="Arduino" className="plogo rounded-lg w-16 h-16"/>
+               <img src="..\Images\C++-logo.png" alt="C++" className="plogo rounded-lg w-16 h-16"/>
+            </center>
          </div>
 
          <div className={`zoomable-div ${isZoomed[1] ? 'zoomed' : ''}`}> 
-         project 1
+         Animal Generator
             <center>
                <object className="justify-center" onMouseEnter={handleMouseEnter(1)} onMouseLeave={handleMouseLeave(1)} data="..\..\Images\Resume -Michael_Hong2.pdf" type="application/pdf" width="326" height="380" ></object>
+            </center>
+            <center className="flex justify-center">
+               <img src="..\Images\OpenGL-logo.png" alt="OpenGL" className="plogo rounded-lg w-16 h-16"/>
+               <img src="..\Images\C++-logo.png" alt="C++" className="plogo rounded-lg w-16 h-16"/>
             </center>
          </div>
          <div className={`zoomable-div ${isZoomed[2] ? 'zoomed' : ''}`}> 
@@ -40,11 +49,20 @@ const Project = () => {
             <center>
                <iframe className="rounded-lg" onMouseEnter={handleMouseEnter(2)} onMouseLeave={handleMouseLeave(2)} width="326" height="380" src="https://www.youtube.com/embed/tt3hhP_VjHc" title="Autonomous Hovercraft project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </center>
+            <center className="flex justify-center">
+               <img src="..\Images\React-logo.png" alt="React" className="plogo rounded-lg w-16 h-16"/>
+               <img src="..\Images\Nodejs-logo.png" alt="Nodejs" className="plogo rounded-lg w-16 h-16"/>
+               <img src="..\Images\MySQL-logo.png" alt="MySQL" className="plogo rounded-lg w-16 h-16"/>
+            </center>
          </div>
          <div className={`zoomable-div ${isZoomed[3] ? 'zoomed' : ''}`}> 
             JobHunt
             <center>
                <iframe className="rounded-lg" onMouseEnter={handleMouseEnter(3)} onMouseLeave={handleMouseLeave(3)} width="326" height="380" src="https://www.youtube.com/embed/tt3hhP_VjHc" title="Autonomous Hovercraft project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </center>
+            <center className="flex justify-center">
+               <img src="..\Images\tailwind-logo   .png" alt="Tailwind" className="plogo rounded-lg w-16 h-16"/>
+               <img src="..\Images\c++.png" alt="C++" className="plogo rounded-lg w-16 h-16"/>
             </center>
          </div>
       </div>

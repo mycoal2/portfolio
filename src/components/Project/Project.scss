@@ -9,3 +9,20 @@
    transform: scale(1.15); /* Adjust the scale factor as needed for zoom in */
    transition: transform 0.4s ease; /* Add a smooth transition for zoom in and out */
  }
+ .project-title {
+   font-size: 2rem; /* Adjust the font size as needed */
+   font-weight: bold;
+   color: #e8cbcb; /* Choose your desired text color */
+   text-align: center;
+   text-transform: uppercase;
+   letter-spacing: 5px; /* Adjust letter spacing for style */
+   margin-bottom: 20px; /* Add spacing between the title and content */
+   border-bottom: 2px solid #007BFF; /* Add an underline with your preferred color */
+   padding-bottom: 10px; /* Space between text and underline */
+ }
+
+ .plogo {
+
+   margin: 10px;
+
+ }
