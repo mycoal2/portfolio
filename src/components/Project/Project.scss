@@ -1,0 +1,11 @@
+ /* CSS */
+.zoomable-div {
+   text-align: center;
+   // padding: 1rem;
+   transition: transform 0.4s ease; /* Add a smooth transition for zoom in and out */
+ }
+ 
+ .zoomable-div.zoomed {
+   transform: scale(1.15); /* Adjust the scale factor as needed for zoom in */
+   transition: transform 0.4s ease; /* Add a smooth transition for zoom in and out */
+ }

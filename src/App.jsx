@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Intro from "./components/Intro/Intro";
 import About from "./components/About/About";
 import Game from "./components/Game/Game";
+import Project from "./components/Project/Project";
 // import {useState} from "react";
 
 
@@ -12,7 +13,7 @@ function App() {
     <>
       <Header/>
       <Routes>
-         <Route path="/" element={<><Intro/><About/></>} />
+         <Route path="/" element={<><Intro/><About/><Project/></>} />
          <Route path="/test" element={<Game></Game>} />
       </Routes>
 
