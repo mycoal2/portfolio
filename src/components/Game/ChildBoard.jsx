@@ -1,31 +1,55 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Game.scss"
 import Square from './Square'
 
 const ChildBoard = (props) => {
    const [cell, setCell] = useState(Array(9).fill(null));
-
+   const [cellWin, setCellWin] = useState(false);
+   const [player1Color, setPlayer1Color] = useState(false);
+ 
    const handleClick = (i, char) => () => {
-      console.log("123")
       let dataCell = cell.slice();
       dataCell[i] = char;
       setCell(dataCell);
+      checkWin(i, dataCell);
+      props.changePlayer();
    }
-   let char1 = "X";
-   let char2 = "O";
 
-  return (
-    <>
-      <Square value = {cell[0]} onClick={handleClick(0, char1)}/>
-      <Square value = {cell[1]} onClick={handleClick(1, char2)}/>
-      <Square value = {cell[2]} onClick={handleClick(2, "X")}/>
-      <Square value = {cell[3]} onClick={handleClick(3, "X")}/>
-      <Square value = {cell[4]} onClick={handleClick(4, "X")}/>
-      <Square value = {cell[5]} onClick={handleClick(5, "X")}/>
-      <Square value = {cell[6]} onClick={handleClick(6, "X")}/>
-      <Square value = {cell[7]} onClick={handleClick(7, "X")}/>
-      <Square value = {cell[8]} onClick={handleClick(8, "X")}/>
-    </>
+   const checkWin = (i, dataCell) => {
+    const lines = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6]
+    ];
+    const linesWin = lines.filter(subarray => subarray.includes(i));
+    for(let i = 0; i < linesWin.length; i++) {
+      if(dataCell[linesWin[i][0]] === dataCell[linesWin[i][1]] && dataCell[linesWin[i][0]] === dataCell[linesWin[i][2]]) {
+        console.log("woner")
+        if(props.playerTurn === "M") {
+          setPlayer1Color(true);
+        }
+        setCellWin(true);
+      }
+    }
+   }
+
+  return (  
+    <div className={`mediumCell ${cellWin ? (player1Color ? 'player1Border' : 'player2Border') : ''}`}>
+      <Square value={cell[0]} onClick={handleClick(0, props.playerTurn)} won={cellWin}/>
+      <Square value={cell[1]} onClick={handleClick(1, props.playerTurn)} won={cellWin}/>
+      <Square value={cell[2]} onClick={handleClick(2, props.playerTurn)} won={cellWin}/>
+      <Square value={cell[3]} onClick={handleClick(3, props.playerTurn)} won={cellWin}/>
+      <Square value={cell[4]} onClick={handleClick(4, props.playerTurn)} won={cellWin}/>
+      <Square value={cell[5]} onClick={handleClick(5, props.playerTurn)} won={cellWin}/>
+      <Square value={cell[6]} onClick={handleClick(6, props.playerTurn)} won={cellWin}/>
+      <Square value={cell[7]} onClick={handleClick(7, props.playerTurn)} won={cellWin}/>
+      <Square value={cell[8]} onClick={handleClick(8, props.playerTurn)} won={cellWin}/>
+    </div>
   )
 }
 

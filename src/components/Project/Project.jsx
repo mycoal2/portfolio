@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import "./Project.scss";
 
 
@@ -47,7 +47,7 @@ const Project = () => {
          <div className={`zoomable-div ${isZoomed[2] ? 'zoomed' : ''}`}> 
             JobHunt
             <center>
-               <iframe className="rounded-lg" onMouseEnter={handleMouseEnter(2)} onMouseLeave={handleMouseLeave(2)} width="326" height="380" src="https://www.youtube.com/embed/tt3hhP_VjHc" title="Autonomous Hovercraft project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+               <iframe className="rounded-lg" onMouseEnter={handleMouseEnter(2)} onMouseLeave={handleMouseLeave(2)}width="326" height="380" src="https://www.youtube.com/embed/ygkWDyd7pO8" title="SOEN 341 Project - Sprint 3 Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </center>
             <center className="flex justify-center">
                <img src="..\Images\React-logo.png" alt="React" className="plogo rounded-lg w-16 h-16"/>

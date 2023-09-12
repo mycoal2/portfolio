@@ -1,3 +1,23 @@
+.game-title {
+   font-size: 2rem; /* Adjust the font size as needed */
+   font-weight: bold;
+   color: #e8cbcb; /* Choose your desired text color */
+   text-align: center;
+   text-transform: uppercase;
+   letter-spacing: 5px; /* Adjust letter spacing for style */
+   margin-bottom: 20px; /* Add spacing between the title and content */
+   border-bottom: 2px solid #007BFF; /* Add an underline with your preferred color */
+   padding-bottom: 10px; /* Space between text and underline */
+ }
+ .turn-title {
+   font-size: 2rem; /* Adjust the font size as needed */
+   font-weight: bold;
+   color: #e8cbcb; /* Choose your desired text color */
+   display: flex;
+   align-items: center;
+   justify-content: center ;
+ }
+
 .board {
    display: grid;
    align-content: center;
@@ -17,7 +37,6 @@
    cursor: pointer;
    width: var(--parentCell-size);
    height: var(--parentCell-size);
-   background-color: beige;
    align-content: center;
    justify-content: center;
    align-items: center;
@@ -25,8 +44,24 @@
 
    grid-template-columns: repeat(3, auto);
 }
+.mediumCell {
+   --parentCell-size: 150px;
+   border-color: transparent;
+   border-width: 1px;
+   display: grid;
+   position: relative;
+   cursor: pointer;
+   width: var(--parentCell-size);
+   height: var(--parentCell-size);
+   align-content: center;
+   justify-content: center;
+   align-items: center;
+   justify-items: center;
+   overflow: hidden;
+   grid-template-columns: repeat(3, auto);
+}
 .childCell {
-   --parentCell-size: 40px;
+   --parentCell-size: 50px;
    border-color: black;
    border-width: 1px;
    display: flex;
@@ -34,7 +69,6 @@
    cursor: pointer;
    width: var(--parentCell-size);
    height: var(--parentCell-size);
-   background-color: rgb(195, 195, 40);
 
    align-content: center;
    justify-content: center;
@@ -55,4 +89,22 @@ cell:nth-child(3), cell:nth-child(6), cell:nth-child(9) {
 
 cell:nth-child(7), cell:nth-child(8), cell:nth-child(9) {
 	border-bottom: none;
+}
+
+.player1Color {
+   color: red;
+}
+.player1Border {
+   border-color: red;
+}
+
+.player2Color {
+   color:blue;
+}
+.player2Border {
+   border-color: blue;
+}
+
+.childbo {
+   border-color: #007BFF;
 }

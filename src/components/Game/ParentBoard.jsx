@@ -3,11 +3,10 @@ import ChildBoard from "./ChildBoard";
 import "./Game.scss"
 
 const ParentBoard = (props) => {
-   let playerTurn = props.playerTurn;
   return (
     <>
-      <cell className="parentCell">
-         <ChildBoard ></ChildBoard>
+      <cell className="bg-third parentCell">
+         <ChildBoard playerTurn={props.playerTurn} changePlayer={props.changePlayer}></ChildBoard>
       </cell>
     </>
   )
