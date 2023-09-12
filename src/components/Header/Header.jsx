@@ -17,7 +17,7 @@ const Header = () => {
             <a href="/#projects">Projects</a>
           </li>
           <li className="overflow-hidden">
-            <a href="/#blog">Blog</a>
+            <Link to="/test">Blog</Link>
           </li>
           <li className="overflow-hidden">
             <a href="/#contact">Contact</a>
