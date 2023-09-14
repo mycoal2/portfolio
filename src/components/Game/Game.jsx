@@ -20,7 +20,7 @@ const Game = () => {
       }
    }
    const changeBoard = (i) => {
-      console.log("changed board")
+      console.log("changed board to " + i)
       if(freeBoard[i]) {
          setCurrentBoard(i);
       } else {

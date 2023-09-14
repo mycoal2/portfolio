@@ -9,13 +9,16 @@ const ChildBoard = (props) => {
    const [boardPlayable, setBoardPlayable] = useState(false);
    const id = props.id;
    useEffect(() => {
-      if(props.boardInfo.currentBoard === null || props.boardInfo.currentBoard === id) {
+      console.log("check if playable");
+      console.log(props.boardInfo.currentBoard);
+      if(props.boardInfo.currentBoard == null || props.boardInfo.currentBoard == id) {
          setBoardPlayable(true);
+         console.log("board is playable" + id);
          return;
       } 
-      boardPlayable(false);
+      setBoardPlayable(false);
       
-   }, [props.boardInfo.currentBoard]);
+   }, [props.boardInfo.currentBoard, id]);
    
 
    const handleClick = (i, char) => () => {
@@ -24,7 +27,7 @@ const ChildBoard = (props) => {
       setCell(dataCell);
       checkWin(i, dataCell);
       props.boardInfo.changeBoard(i);
-      console.log(props.boardInfo.currentBoard);
+      // console.log(props.boardInfo.currentBoard);
       // console.log(props.boardInfo.freeBoard);
       props.changePlayer();
    }
@@ -62,7 +65,7 @@ const ChildBoard = (props) => {
    }
 
   return (  
-    <div className={`pointer-events-none mediumCell ${cellWin ? (player1Color ? 'player1Border' : 'player2Border') : ''}`}>
+    <div className={`mediumCell ${cellWin ? (player1Color ? 'player1Border' : 'player2Border') : ''} ${boardPlayable ? '' : 'pointer-events-none'}`}>
       <Square value={cell[0]} onClick={handleClick(0, props.playerTurn)} won={cellWin}/>
       <Square value={cell[1]} onClick={handleClick(1, props.playerTurn)} won={cellWin}/>
       <Square value={cell[2]} onClick={handleClick(2, props.playerTurn)} won={cellWin}/>
