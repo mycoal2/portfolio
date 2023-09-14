@@ -19,16 +19,21 @@ const Game = () => {
          setPlayerTurn(player1);
       }
    }
-   const changeBoard = (i) => () => {
+   const changeBoard = (i) => {
+      console.log("changed board")
       if(freeBoard[i]) {
          setCurrentBoard(i);
       } else {
          setCurrentBoard(null);
       }
    }
-   // function checkWin() {
-
-   // };
+   const boardInfo = {
+      currentBoard,
+      changeBoard,
+      freeBoard,
+      setFreeBoard,
+   }
+   
    return (
       <section className="bg-secondery py-20">
          <div className="game-title">GIGA TIC TAC TOE</div>
@@ -37,15 +42,15 @@ const Game = () => {
             <div className="overflow-hidden">TURN</div>
          </div>
          <div className="board">
-            <ParentBoard playerTurn={playerTurn} changePlayer={changePlayerTurn} currentBoard={currentBoard} freeBoard={freeBoard} changeBoard={changeBoard} setFreeBoard={setFreeBoard}/>
-            <ParentBoard playerTurn={playerTurn} changePlayer={changePlayerTurn} currentBoard={currentBoard} freeBoard={freeBoard} changeBoard={changeBoard} setFreeBoard={setFreeBoard}/>
-            <ParentBoard playerTurn={playerTurn} changePlayer={changePlayerTurn} currentBoard={currentBoard} freeBoard={freeBoard} changeBoard={changeBoard} setFreeBoard={setFreeBoard}/>
-            <ParentBoard playerTurn={playerTurn} changePlayer={changePlayerTurn} currentBoard={currentBoard} freeBoard={freeBoard} changeBoard={changeBoard} setFreeBoard={setFreeBoard}/>
-            <ParentBoard playerTurn={playerTurn} changePlayer={changePlayerTurn} currentBoard={currentBoard} freeBoard={freeBoard} changeBoard={changeBoard} setFreeBoard={setFreeBoard}/>
-            <ParentBoard playerTurn={playerTurn} changePlayer={changePlayerTurn} currentBoard={currentBoard} freeBoard={freeBoard} changeBoard={changeBoard} setFreeBoard={setFreeBoard}/>
-            <ParentBoard playerTurn={playerTurn} changePlayer={changePlayerTurn} currentBoard={currentBoard} freeBoard={freeBoard} changeBoard={changeBoard} setFreeBoard={setFreeBoard}/>
-            <ParentBoard playerTurn={playerTurn} changePlayer={changePlayerTurn} currentBoard={currentBoard} freeBoard={freeBoard} changeBoard={changeBoard} setFreeBoard={setFreeBoard}/>
-            <ParentBoard playerTurn={playerTurn} changePlayer={changePlayerTurn} currentBoard={currentBoard} freeBoard={freeBoard} changeBoard={changeBoard} setFreeBoard={setFreeBoard}/>
+            <ParentBoard playerTurn={playerTurn} changePlayer={changePlayerTurn} boardInfo={boardInfo} id="0"/>
+            <ParentBoard playerTurn={playerTurn} changePlayer={changePlayerTurn} boardInfo={boardInfo} id="1"/>
+            <ParentBoard playerTurn={playerTurn} changePlayer={changePlayerTurn} boardInfo={boardInfo} id="2"/>
+            <ParentBoard playerTurn={playerTurn} changePlayer={changePlayerTurn} boardInfo={boardInfo} id="3"/>
+            <ParentBoard playerTurn={playerTurn} changePlayer={changePlayerTurn} boardInfo={boardInfo} id="4"/>
+            <ParentBoard playerTurn={playerTurn} changePlayer={changePlayerTurn} boardInfo={boardInfo} id="5"/>
+            <ParentBoard playerTurn={playerTurn} changePlayer={changePlayerTurn} boardInfo={boardInfo} id="6"/>
+            <ParentBoard playerTurn={playerTurn} changePlayer={changePlayerTurn} boardInfo={boardInfo} id="7"/>
+            <ParentBoard playerTurn={playerTurn} changePlayer={changePlayerTurn} boardInfo={boardInfo} id="8"/>
          </div>
       </section>
    )
