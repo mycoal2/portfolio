@@ -5,14 +5,14 @@ const About = () => {
          <div className="container mx-auto grid md:grid-cols-2 items-center justify-center md:justify-between">
          <div className="about-img">
             <img
-               src="..\Images\pic.jpg"
+               src={process.env.PUBLIC_URL + '/Images/pic.jpg'}
                alt="coding illustration"
                className="rounded-full shadow w-96 h-128 mr-auto ml-20"
             />
          </div>
          <div className="about-info">
             <h2 className="text-4xl font-bold mb-5 border-indigo-600 pb-2">
-               <img src="../../Images/monkaS.png" alt="👀" className="rounded-lg inline w-20 h-15"></img>
+               <img src={process.env.PUBLIC_URL + '/Images/monkaS.png'} alt="👀" className="rounded-lg inline w-20 h-15"></img>
                Background Check 
             </h2>
             <p className="pb-5">

@@ -59,16 +59,15 @@ const Intro = () => {
           </div>
 
           <a
-            href="/#projects"
+            href={`${process.env.PUBLIC_URL}/#projects`}
             className="Projects"
-            // className="test btn bg-accent  border-2 border-[#7477FF] text-white px-6 py-3 hover:bg-transparent"
           >
             See Projects
           </a>
         </div>
 
         <div>
-          <img src="..\Images\pic.jpg" alt="pic of me lol" className="rounded-lg w-96 h-128 mr-auto ml-20"/>
+          <img src={process.env.PUBLIC_URL + '/Images/pi.jpg'} alt="pic of me lol" className="rounded-lg w-96 h-128 mr-auto ml-20"/>
         </div>
       </div>
     </section>

@@ -13,8 +13,8 @@ function App() {
     <>
       <Header/>
       <Routes>
-         <Route path="/" element={<><Intro/><About/><Project/></>} />
-         <Route path="/test" element={<Game></Game>} />
+         <Route path={process.env.PUBLIC_URL} element={<><Intro/><About/><Project/></>} />
+         <Route path={`${process.env.PUBLIC_URL}/test`} element={<Game></Game>} />
       </Routes>
 
     </>
