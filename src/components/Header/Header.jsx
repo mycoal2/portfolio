@@ -23,7 +23,7 @@ const Header = () => {
             <a href={`${process.env.PUBLIC_URL}/#contact`}>Contact</a>
           </li>
           <li className="overflow-hidden">
-            <a href="..\src\Assets\Files\Resume -Michael_Hong2.pdf" target="_blank" without rel="noreferrer">
+            <a href={process.env.PUBLIC_URL + '/Images/Resume-Michael_Hong.pdf'} target="_blank" without rel="noreferrer">
               Resume
             </a>
           </li>
