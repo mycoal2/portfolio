@@ -8,12 +8,19 @@ const ChildBoard = (props) => {
    const [player1Color, setPlayer1Color] = useState(false);
    const [boardPlayable, setBoardPlayable] = useState(false);
    const id = props.id;
+   const lines = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6]
+   ];
    useEffect(() => {
-      console.log("check if playable");
-      console.log(props.boardInfo.currentBoard);
-      if(props.boardInfo.currentBoard == null || props.boardInfo.currentBoard == id) {
+      if(props.boardInfo.currentBoard === null || props.boardInfo.currentBoard === id) {
          setBoardPlayable(true);
-         console.log("board is playable" + id);
          return;
       } 
       setBoardPlayable(false);
@@ -25,42 +32,55 @@ const ChildBoard = (props) => {
       let dataCell = cell.slice();
       dataCell[i] = char;
       setCell(dataCell);
-      checkWin(i, dataCell);
-      props.boardInfo.changeBoard(i);
-      // console.log(props.boardInfo.currentBoard);
-      // console.log(props.boardInfo.freeBoard);
+      if(checkWin(i, dataCell) !== 5) {
+         props.boardInfo.changeBoard(i);
+      }
       props.changePlayer();
    }
 
    const checkWin = (i, dataCell) => {
-      const lines = [
-         [0, 1, 2],
-         [3, 4, 5],
-         [6, 7, 8],
-         [0, 3, 6],
-         [1, 4, 7],
-         [2, 5, 8],
-         [0, 4, 8],
-         [2, 4, 6]
-      ];
       const linesWin = lines.filter(subarray => subarray.includes(i));
       for(let index = 0; index < linesWin.length; index++) {
          if(dataCell[linesWin[index][0]] === dataCell[linesWin[index][1]] && dataCell[linesWin[index][0]] === dataCell[linesWin[index][2]]) {
             console.log("woner")
-            if(props.playerTurn === "M") {
-               setPlayer1Color(true);
-            }
             setCellWin(true);
             let tempFreeBoard = props.boardInfo.freeBoard.slice();
-            tempFreeBoard[id] = false;
+            if(props.playerTurn === props.boardInfo.player1) {
+               setPlayer1Color(true);
+               tempFreeBoard[id] = "Player1";
+            } else {
+               tempFreeBoard[id] = "Player2";
+            }
             props.boardInfo.setFreeBoard(tempFreeBoard);
-            return;
+            props.boardInfo.changeBoard(i, tempFreeBoard);
+            checkFinalWin(tempFreeBoard);
+            return 5;
          }
       }
       if(!dataCell.some((element) => element === null)) {
          let tempFreeBoard = props.boardInfo.freeBoard.slice();
-         tempFreeBoard[i] = false;
+         tempFreeBoard[i] = "Draw";
          props.boardInfo.setFreeBoard(tempFreeBoard);
+      }
+   }
+   const checkFinalWin = (board) => {
+      const linesWin = lines.filter(subarray => subarray.includes(id));
+      for(let index = 0; index < linesWin.length; index++) {
+         if(board[linesWin[index][0]] === board[linesWin[index][1]] && board[linesWin[index][0]] === board[linesWin[index][2]]) {
+            console.log("GAME END GG")
+            if(props.playerTurn === props.boardInfo.player1) {
+               console.log("P1 won");
+               props.boardInfo.setGameState("Player 1 HAS WON")
+            } else {
+               console.log("P2 won");
+               props.boardInfo.setGameState("Player 2 HAS WON")
+            }
+
+            return;
+         }
+      }
+      if(!board.some((element) => element === null)) {
+         props.boardInfo.setGameState("GAME DRAW");
       }
    }
 
