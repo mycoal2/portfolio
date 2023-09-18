@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink } from 'react-router-hash-link';
 import "./Intro.scss";
 import {
   AiOutlineTwitter,
@@ -10,7 +11,7 @@ import {
 
 const Intro = () => {
   return (
-    <section className="bg-primary px-4 text-white py-20">
+    <section className="bg-primary px-4 text-white py-20" id="">
       <div className="container mx-auto grid md:grid-cols-2 items-center justify-center md:justify-between ">
         <div className="md:pb-5 ">
           <h1 className="cursive text-4xl lg:text-6xl py-3">
@@ -58,12 +59,12 @@ const Intro = () => {
             </a>
           </div>
 
-          <a
-            href={`${process.env.PUBLIC_URL}/#projects`}
+          <HashLink
+            to={`${process.env.PUBLIC_URL}/#projects`}
             className="Projects"
           >
             See Projects
-          </a>
+          </HashLink>
         </div>
 
         <div>

@@ -55,17 +55,6 @@ const Project = () => {
                <img src={process.env.PUBLIC_URL + '/Images/MySQL-logo.png'} alt="MySQL" className="plogo rounded-lg w-16 h-16"/>
             </center>
          </div>
-         <div className={`zoomable-div ${isZoomed[3] ? 'zoomed' : ''}`}> 
-            Ultimate Tic-Tac-Toe
-            <center>
-               <iframe className="rounded-lg" onMouseEnter={handleMouseEnter(3)} onMouseLeave={handleMouseLeave(3)} width="326" height="380" src="https://www.youtube.com/embed/tt3hhP_VjHc" title="Autonomous Hovercraft project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </center>
-            <center className="flex justify-center">
-               <img src={process.env.PUBLIC_URL + '/Images/tailwind-logo.png'} alt="Tailwind" className="plogo rounded-lg w-16 h-16"/>
-               <img src={process.env.PUBLIC_URL + '/Images/React-logo.png'} alt="React" className="plogo rounded-lg w-16 h-16"/>
-               <img src={process.env.PUBLIC_URL + '/Images/JavaScript-logo.png'} alt="Javascript" className="plogo rounded-lg w-16 h-16"/>
-            </center>
-         </div>
       </div>
    </section>
   )
