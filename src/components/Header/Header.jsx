@@ -20,12 +20,12 @@ const Header = () => {
           <li className="overflow-hidden">
             <HashLink to={`${process.env.PUBLIC_URL}#projects`}>Projects</HashLink>
           </li>
-          {/* <li className="overflow-hidden">
+          <li className="overflow-hidden">
             <HashLink to={`${process.env.PUBLIC_URL}/test`}>Blog</HashLink>
-          </li> */}
-          {/* <li className="overflow-hidden">
+          </li>
+          <li className="overflow-hidden">
             <HashLink to={`${process.env.PUBLIC_URL}/resume`}>Contact</HashLink>
-          </li> */}
+          </li>
           <li className="overflow-hidden">
             <Link to={`${process.env.PUBLIC_URL}/resume`}>
               Resume
