@@ -4,7 +4,7 @@ const Square = (props) => {
   const [player1Color, setPlayer1Color] = useState(false);
   const [isButtonClicked, setIsButtonClicked] = useState(false);
   useEffect(() => {
-    if(props.value === "M") {
+    if(props.value === "O") {
       setPlayer1Color(true);
     }  else {
       setPlayer1Color(false);

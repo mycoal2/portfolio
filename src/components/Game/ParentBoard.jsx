@@ -5,7 +5,7 @@ import "./Game.scss"
 const ParentBoard = (props) => {
    const id = props.id;
    var boardYes = false;
-   if(props.boardInfo.currentBoard === props.id || props.boardInfo.currentBoard === null) {
+   if(props.boardInfo.currentBoard === props.id || (props.boardInfo.currentBoard === null && props.boardInfo.freeBoard[id] === null)) {
       boardYes = true;
    }
    return (
