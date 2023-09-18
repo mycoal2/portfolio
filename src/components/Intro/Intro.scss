@@ -57,3 +57,19 @@
     transform-origin: right;
     scale: 1 1;
 }
+
+.test {
+      position:fixed;
+      top:0;
+      left: 0;
+      width:100%;
+      height:100%;
+}
+
+.test1 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width:80%;
+   height:90vh;
+}

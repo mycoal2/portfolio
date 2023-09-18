@@ -5,6 +5,7 @@ import Intro from "./components/Intro/Intro";
 import About from "./components/About/About";
 import Game from "./components/Game/Game";
 import Project from "./components/Project/Project";
+import Resume from "./components/Resume/Resume";
 // import {useState} from "react";
 
 
@@ -15,6 +16,7 @@ function App() {
       <Routes>
          <Route path={process.env.PUBLIC_URL} element={<><Intro/><About/><Project/></>} />
          <Route path={`${process.env.PUBLIC_URL}/test`} element={<Game></Game>} />
+         <Route path={`${process.env.PUBLIC_URL}/resume`} element={<Resume></Resume>} />
       </Routes>
 
     </>
