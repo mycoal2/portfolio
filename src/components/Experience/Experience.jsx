@@ -3,7 +3,7 @@ import "./Experience.scss";
 
 const Experience = () => {
   return (
-    <section className="bg-primary px-4 text-white py-12" id="projects">
+    <section className="bg-primary px-4 text-white py-12" id="experience">
       <h3 className="project-title my-5"> Experience </h3>
       <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-mandatory snap-x">
             <article className="bg-presagis flex flex-col rounded-lg items-center space-y-5 flex-shrink-0 snap-center overflow-hidden opacity-100">
