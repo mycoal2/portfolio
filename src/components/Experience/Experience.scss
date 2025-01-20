@@ -4,3 +4,22 @@
    background-repeat: no-repeat; /* Prevent image repetition */
    background-position: center;
 }
+
+.bg-genetec {
+    position: relative;
+    overflow: hidden; /* To clip the rotated background */
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('../../../public/Images/Genetec.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: rotate(-25deg);
+      z-index: 0; /* Ensure it stays in the background */
+    }
+  }
