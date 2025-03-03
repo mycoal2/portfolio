@@ -29,9 +29,10 @@ const Experience = () => {
                   </div>
                   <p className="py-3 text-blue-200 ">Jan 2024 - Aug 2024</p>
                   <ul className="space-y-3 ml-5 text-sm">
-                     <li className="mr-2">Developed a test cases and unit tests in C++</li>
-                     <li className="mr-2">User Acceptance Tester, document test results and report defects.</li>
-                     <li className="mr-2">Applied Agile and Scrum methodologies for project management.</li>
+                     <li className="mr-2">Wrote and optimized automation scripts to streamline repetitive testing processes,</li>
+                     <li> reducing manual effort and time spent</li>
+                     <li className="mr-2">Validated seamless deployment and upgrades as part of the Staging team</li>
+                     <li className="mr-2">Implemented automated data scraping on new test machines using Grafana</li>
                   </ul>
                </div>
             </article>

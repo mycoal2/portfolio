@@ -23,9 +23,9 @@ const Header = () => {
           <li className="overflow-hidden">
             <HashLink to={`${process.env.PUBLIC_URL}#experience`}>Experience</HashLink>
           </li>
-          <li className="overflow-hidden">
+          {/* <li className="overflow-hidden">
             <HashLink to={`${process.env.PUBLIC_URL}/test`}>Contact</HashLink>
-          </li>
+          </li> */}
           <li className="overflow-hidden">
             <Link to={`${process.env.PUBLIC_URL}/resume`}>
               Resume

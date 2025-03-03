@@ -21,8 +21,9 @@ const About = () => {
             My passion emerged from all the websites and games I played and tried to understand how they were made.
             </p>
             <p className="pb-5">
-            I am currently in my third year for my bachelors in <span className="text-green-600">COMPUTER ENGINEERING</span>.
-            I am proficient in C++, Java, Javascript, React.js, Node.js, but what I am most confident in is my ability to learn and adapt fast.
+            I am currently a <span className="text-green-600">COMPUTER ENGINEERING</span> student with a 3.8 GPA and experience in software testing and development.
+            
+            I am proficient in C++, C#, Java, Javascript (React.js, Node.js), SQL but what I am most confident in is my ability to learn and adapt fast.
             </p>
 
             <p>
